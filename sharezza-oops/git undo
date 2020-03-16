@@ -1,0 +1,206 @@
+anaisreau@Anais:~/quetes$ mkdir git3
+anaisreau@Anais:~/quetes$ cd git3
+anaisreau@Anais:~/quetes/git3$ mkdir sharezza-oops
+anaisreau@Anais:~/quetes/git3$ cd sharezza-oops/
+anaisreau@Anais:~/quetes/git3/sharezza-oops$ touch index.html
+anaisreau@Anais:~/quetes/git3/sharezza-oops$ nano index.html
+anaisreau@Anais:~/quetes/git3/sharezza-oops$ git init sharezza-oops
+Dépôt Git vide initialisé dans /home/anaisreau/quetes/git3/sharezza-oops/sharezza-oops/.git/
+anaisreau@Anais:~/quetes/git3/sharezza-oops$ git add .
+fatal: ni ceci ni aucun de ses répertoires parents n'est un dépôt git : .git
+anaisreau@Anais:~/quetes/git3/sharezza-oops$ ls
+index.html  sharezza-oops
+anaisreau@Anais:~/quetes/git3/sharezza-oops$ cd ..*
+anaisreau@Anais:~/quetes/git3$ git add .
+fatal: ni ceci ni aucun de ses répertoires parents n'est un dépôt git : .git
+anaisreau@Anais:~/quetes/git3$ git add index.html 
+fatal: ni ceci ni aucun de ses répertoires parents n'est un dépôt git : .git
+anaisreau@Anais:~/quetes/git3$ git init
+Dépôt Git vide initialisé dans /home/anaisreau/quetes/git3/.git/
+anaisreau@Anais:~/quetes/git3$ git ad .
+git : 'ad' n'est pas une commande git. Voir 'git --help'.
+
+Les commandes les plus ressemblantes sont
+	add
+	am
+anaisreau@Anais:~/quetes/git3$ git add .
+anaisreau@Anais:~/quetes/git3$ git commit -m "first commit"
+[master (commit racine) 16f5396] first commit
+ Committer: REAU <anaisreau@Anais.Reau>
+Votre nom et votre adresse courriel ont été configurés automatiquement en se
+fondant sur votre nom d'utilisateur et le nom de votre machine. Veuillez 
+vérifier qu'ils sont corrects. Vous pouvez supprimer ce message en les 
+paramétrant explicitement. Lancez les commandes suivantes et suivez les
+instructions dans votre éditeur pour éditer votre fichier de configuration :
+
+    git config --global --edit
+
+Après ceci, vous pouvez corriger l'identité utilisée pour cette validation avec :
+
+    git commit --amend --reset-author
+
+ 1 file changed, 10 insertions(+)
+ create mode 100644 sharezza-oops/index.html
+anaisreau@Anais:~/quetes/git3$ git remote add origin https://github.com/anaisreau/sharezza-opps.git
+anaisreau@Anais:~/quetes/git3$ git push -u origin master 
+Username for 'https://github.com': anaisreau
+Password for 'https://anaisreau@github.com': 
+Décompte des objets: 4, fait.
+Delta compression using up to 4 threads.
+Compression des objets: 100% (2/2), fait.
+Écriture des objets: 100% (4/4), 344 bytes | 344.00 KiB/s, fait.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/anaisreau/sharezza-opps.git
+ * [new branch]      master -> master
+La branche 'master' est paramétrée pour suivre la branche distante 'master' depuis 'origin'.
+anaisreau@Anais:~/quetes/git3$ code index.html
+anaisreau@Anais:~/quetes/git3$ git status
+Sur la branche master
+Votre branche est à jour avec 'origin/master'.
+
+Fichiers non suivis:
+  (utilisez "git add <fichier>..." pour inclure dans ce qui sera validé)
+
+	index.html
+
+aucune modification ajoutée à la validation mais des fichiers non suivis sont présents (utilisez "git add" pour les suivre)
+anaisreau@Anais:~/quetes/git3$ git add .
+anaisreau@Anais:~/quetes/git3$ git commit "add title" 
+error: pathspec 'add title' did not match any file(s) known to git.
+anaisreau@Anais:~/quetes/git3$ git commit -m "add title"
+[master db03bbe] add title
+ Committer: REAU <anaisreau@Anais.Reau>
+Votre nom et votre adresse courriel ont été configurés automatiquement en se
+fondant sur votre nom d'utilisateur et le nom de votre machine. Veuillez 
+vérifier qu'ils sont corrects. Vous pouvez supprimer ce message en les 
+paramétrant explicitement. Lancez les commandes suivantes et suivez les
+instructions dans votre éditeur pour éditer votre fichier de configuration :
+
+    git config --global --edit
+
+Après ceci, vous pouvez corriger l'identité utilisée pour cette validation avec :
+
+    git commit --amend --reset-author
+
+ 1 file changed, 10 insertions(+)
+ create mode 100644 index.html
+anaisreau@Anais:~/quetes/git3$ git push 
+Username for 'https://github.com': anaisreau
+Password for 'https://anaisreau@github.com': 
+Décompte des objets: 3, fait.
+Delta compression using up to 4 threads.
+Compression des objets: 100% (3/3), fait.
+Écriture des objets: 100% (3/3), 371 bytes | 371.00 KiB/s, fait.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/anaisreau/sharezza-opps.git
+   16f5396..db03bbe  master -> master
+anaisreau@Anais:~/quetes/git3$ git add .
+anaisreau@Anais:~/quetes/git3$ git commit -m "add a new title h1" 
+[master 6298af4] add a new title h1
+ Committer: REAU <anaisreau@Anais.Reau>
+Votre nom et votre adresse courriel ont été configurés automatiquement en se
+fondant sur votre nom d'utilisateur et le nom de votre machine. Veuillez 
+vérifier qu'ils sont corrects. Vous pouvez supprimer ce message en les 
+paramétrant explicitement. Lancez les commandes suivantes et suivez les
+instructions dans votre éditeur pour éditer votre fichier de configuration :
+
+    git config --global --edit
+
+Après ceci, vous pouvez corriger l'identité utilisée pour cette validation avec :
+
+    git commit --amend --reset-author
+
+ 1 file changed, 2 insertions(+)
+anaisreau@Anais:~/quetes/git3$ git push 
+Username for 'https://github.com': anais reau
+Password for 'https://anais reau@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/anaisreau/sharezza-opps.git/'
+anaisreau@Anais:~/quetes/git3$ git push
+Username for 'https://github.com': anaisreau
+Password for 'https://anaisreau@github.com': 
+Décompte des objets: 3, fait.
+Delta compression using up to 4 threads.
+Compression des objets: 100% (3/3), fait.
+Écriture des objets: 100% (3/3), 402 bytes | 402.00 KiB/s, fait.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/anaisreau/sharezza-opps.git
+   db03bbe..6298af4  master -> master
+anaisreau@Anais:~/quetes/git3$ git status
+Sur la branche master
+Votre branche est à jour avec 'origin/master'.
+
+Modifications qui ne seront pas validées :
+  (utilisez "git add <fichier>..." pour mettre à jour ce qui sera validé)
+  (utilisez "git checkout -- <fichier>..." pour annuler les modifications dans la copie de travail)
+
+	modifié :         index.html
+
+aucune modification n'a été ajoutée à la validation (utilisez "git add" ou "git commit -a")
+anaisreau@Anais:~/quetes/git3$ git add .
+anaisreau@Anais:~/quetes/git3$ git commit -m "add first paragraph" 
+[master eed0ae4] add first paragraph
+ Committer: REAU <anaisreau@Anais.Reau>
+Votre nom et votre adresse courriel ont été configurés automatiquement en se
+fondant sur votre nom d'utilisateur et le nom de votre machine. Veuillez 
+vérifier qu'ils sont corrects. Vous pouvez supprimer ce message en les 
+paramétrant explicitement. Lancez les commandes suivantes et suivez les
+instructions dans votre éditeur pour éditer votre fichier de configuration :
+
+    git config --global --edit
+
+Après ceci, vous pouvez corriger l'identité utilisée pour cette validation avec :
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+anaisreau@Anais:~/quetes/git3$ git push 
+Username for 'https://github.com': anaisreau
+Password for 'https://anaisreau@github.com': 
+Décompte des objets: 3, fait.
+Delta compression using up to 4 threads.
+Compression des objets: 100% (3/3), fait.
+Écriture des objets: 100% (3/3), 356 bytes | 356.00 KiB/s, fait.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/anaisreau/sharezza-opps.git
+   6298af4..eed0ae4  master -> master
+anaisreau@Anais:~/quetes/git3$ git status
+Sur la branche master
+Votre branche est à jour avec 'origin/master'.
+
+rien à valider, la copie de travail est propre
+anaisreau@Anais:~/quetes/git3$ git log --oneline
+eed0ae4 (HEAD -> master, origin/master) add first paragraph
+6298af4 add a new title h1
+db03bbe add title
+16f5396 first commit
+anaisreau@Anais:~/quetes/git3$ git revert HEAD 
+[master 061a7e4] Revert "add first paragraph"
+ Committer: REAU <anaisreau@Anais.Reau>
+Votre nom et votre adresse courriel ont été configurés automatiquement en se
+fondant sur votre nom d'utilisateur et le nom de votre machine. Veuillez 
+vérifier qu'ils sont corrects. Vous pouvez supprimer ce message en les 
+paramétrant explicitement. Lancez les commandes suivantes et suivez les
+instructions dans votre éditeur pour éditer votre fichier de configuration :
+
+    git config --global --edit
+
+Après ceci, vous pouvez corriger l'identité utilisée pour cette validation avec :
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+anaisreau@Anais:~/quetes/git3$ git log --oneline
+061a7e4 (HEAD -> master) Revert "add first paragraph"
+eed0ae4 (origin/master) add first paragraph
+6298af4 add a new title h1
+db03bbe add title
+16f5396 first commit
+anaisreau@Anais:~/quetes/git3$ git status
+Sur la branche master
+Votre branche est en avance sur 'origin/master' de 1 commit.
+  (utilisez "git push" pour publier vos commits locaux)
+
+rien à valider, la copie de travail est propre
+anaisreau@Anais:~/quetes/git3$ 
